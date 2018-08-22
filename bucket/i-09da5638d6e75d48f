@@ -1,0 +1,33 @@
+i-09da5638d6e75d48f
+aws ec2 get-console-output --instance-id i-09da5638d6e75d48f
+
+chmod 400 ./IanNowickiAdminKey.pem
+
+ssh -i "YOUR_KEY_PAIR_NAME.pem" ubuntu@YOUR_IPv4_LINK
+
+ssh -i IanNowickiAdminKey.pem ubuntu@ec2-54-89-159-154.compute-1.amazonaws.com
+
+server {
+    listen 80;
+    server_name your_domain.com www.iannowicki.com;
+    location / {
+        proxy_pass http://127.0.0.1:8080;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+        proxy_redirect off;
+     }
+}
+ssh -i "TheRealKeyPair.pem" ubuntu@ec2-54-152-197-126.compute-1.amazonaws.com
+
+
+db.createUser({ user: "Ian",
+                 pwd: "IRule",
+                 roles: [{ role: "readAnyDatabase", db: "admin" },
+                          "readWrite"] })
+
+
+
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCzF0lM/hRVDEOj/yzhDXT7yRAHPZOMRj4A1Z7K2ddksCTzhu1u7uLqsdWcRg6RRqcm1mO1sChxtDWawvPgo33kvWCMMQfLf6kZdr7apI25SaW62K74I3e9j7vp1rXDN18yT6boxcaWg+JNYysuh4QMQbdOHxhOA3I2PaHiTiZndIQ07CKiyGhTKFaFDBh35TN4yBJpxHzQx0fBiAtj3x2X81xnrTj3r5fJvnfk1oFjGCyKePhDpMIXBhEQzcuGME8lpTy376gFVKFpDEGeh9NiIdkU71G48oNSXvibzuT4m0fQHfxk7MtByEoe/plBVxahmRPCLeWXCdtdXbDofmz7 ubuntu@ip-172-31-87-146
