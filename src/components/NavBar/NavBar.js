@@ -10,8 +10,8 @@ import {
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
-  DropdownItem } from 'reactstrap';
-
+  DropdownItem} from 'reactstrap';
+ 
 export default class Example extends React.Component {
   constructor(props) {
     super(props);
@@ -26,19 +26,22 @@ export default class Example extends React.Component {
       isOpen: !this.state.isOpen
     });
   }
+
   render() {
     return (
       <div>
         <Navbar color="light" light expand="md">
-          <NavbarBrand href="/">reactstrap</NavbarBrand>
+          <NavbarBrand aria-current="true" href="#/" class="active">Fucking place holder</NavbarBrand>
+          
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
+
               <NavItem>
-                <NavLink href="/components/">Components</NavLink>
+                <NavLink aria-current="true" href="#/stuff" class="active">Stuff</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="https://github.com/IanBlackbeard?tab=repositories">GitHub</NavLink>
+                <NavLink aria-current="true" href="#/contact" class="active">Contact</NavLink>
               </NavItem>
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>
@@ -60,6 +63,7 @@ export default class Example extends React.Component {
             </Nav>
           </Collapse>
         </Navbar>
+        
       </div>
     );
   }

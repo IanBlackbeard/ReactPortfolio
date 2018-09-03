@@ -1,21 +1,42 @@
-
 import React, { Component } from 'react';
 import { Button } from 'reactstrap';
-import { BrowserRouter as Router, Route, Switch, Link,} from "react-router-dom";
+import { BrowserRouter as 
+	Router, 
+	Route, 
+	Switch, 
+	Link, 
+	NavLink, 
+	HashRouter} from "react-router-dom";
 
-//Components
+//components
 import NavBar from "./components/NavBar";
+
+//pages
+import Home from "./pages/Home";
+import Stuff from "./pages/Stuff";
+import Contact from "./pages/Contact";
 
 //Styling
 import './App.css';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 
 class App extends Component {
   render() {
     return (
-      <NavBar>
-      
-      </NavBar>
+	<div>
+
+		<NavBar>
+      	</NavBar>
+
+		<HashRouter>
+	        <div className="content">
+	          <Route exact path="/" component={Home}/>
+	          <Route path="/stuff" component={Stuff}/>
+	          <Route path="/contact" component={Contact}/> 
+			</div>
+	    </HashRouter>
+	    
+    </div>
     );
   }
 }
