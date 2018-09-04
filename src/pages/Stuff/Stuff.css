@@ -1,0 +1,111 @@
+/*.media-object {
+	padding-bottom: 0px;
+	margin-left: 30px;
+}
+
+.media-left {
+	margin-bottom: 20px;
+}*/
+.jumbotron {
+	border: .5px solid grey;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+img.media-object {
+	padding-left: 30px;
+	padding-bottom: 10px;
+	padding-right: 20px;
+}
+
+img.media-left {
+	margin-bottom: 30px;
+}
+
+.material-icons {
+	margin-top: 183px;
+}
+
+#beerList-header {
+	text-align: center;
+}
+
+#card-width {
+	padding: 0px;
+}
+
+.detail-card .card {
+	margin: 10px;
+	border: .5px solid grey;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/*.detail-card .card-img-top {
+	padding: 20px;
+	padding-bottom: 0px;
+	border-radius: 5px;
+}*/
+.detail-card {
+	padding-left: 05px;
+	padding-right: 05px;
+}
+
+.detail-card .card-body {
+	padding-top: 05px;
+}
+
+.detail-card #card-h2 {
+	margin-bottom: 0px;
+	border-bottom: 1px solid grey;
+	padding-top: 8px;
+}
+
+.detail-card .card-subtitle {
+	margin-bottom: 6px;
+	font-size: 15px;
+}
+
+.detail-card .card-text {
+	font-size: 11px;
+	margin-bottom: 2px;
+}
+
+.detail-card #card-abv {
+	border-bottom: 1px solid grey;
+}
+
+.detail-card #card-description {
+	margin-top: 6px;
+}
+
+.detail-card #card-button {
+	margin-top: 6px;	
+}
+
+div.col-sm-3 {
+	padding: 0px;
+}
+
+.modal-content {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#modalForm-checkHeader {
+	font-size: 15px;
+	padding-bottom: 15px;
+	margin-left: 30px;
+}
+
+.form-check {
+	margin-left: 20px;
+}
+
+#form-check {
+	/*margin-left: 20px;*/
+	margin-bottom: 20px;
+}
+
+@media screen and (max-width: 768px) {
+
+}
+
+

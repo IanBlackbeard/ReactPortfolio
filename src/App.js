@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Button } from 'reactstrap';
 import { BrowserRouter as 
 	Router, 
 	Route, 
@@ -7,6 +6,8 @@ import { BrowserRouter as
 	Link, 
 	NavLink, 
 	HashRouter} from "react-router-dom";
+import { Button } from 'reactstrap';
+// import "./pages/Home/Home.css";
 
 //components
 import NavBar from "./components/NavBar";
@@ -17,7 +18,7 @@ import Stuff from "./pages/Stuff";
 import Contact from "./pages/Contact";
 
 //Styling
-import './App.css';
+// import './App.css';
 // import logo from './logo.svg';
 
 class App extends Component {
@@ -35,7 +36,7 @@ class App extends Component {
 	          <Route path="/contact" component={Contact}/> 
 			</div>
 	    </HashRouter>
-	    
+
     </div>
     );
   }
