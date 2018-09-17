@@ -18,8 +18,8 @@ const items = [
   },
   {
     id: 2,
-    altText: 'Slide 2',
-    caption: 'Slide 2'
+    altText: 'Slide piuwefivlnweflv',
+    caption: 'Slide piuwefivlnweflv'
   },
   {
     id: 3,
